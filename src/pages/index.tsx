@@ -1,14 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBuilding } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
+import { IoMenu } from 'react-icons/io5';
 
 const index = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div>
-      <header>
-        <div className='flex justify-end gap-10 px-6 py-3 xl:px-[150px]'>
+      <header className='fixed top-0 z-50 w-full'>
+        <div className='flex justify-end gap-10 bg-white px-6 py-3 xl:px-[150px]'>
           <Link href={'/'} className='text-xs md:text-sm'>
             Privacy Policy
           </Link>
@@ -50,14 +53,36 @@ const index = () => {
                 Login
               </Link>
             </div>
-            <div className='block text-[50px] text-white xl:hidden'>
-              <IoIosClose />
+            <div
+              className='block text-[50px] text-white xl:hidden'
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMenuOpen(!isMenuOpen);
+              }}
+            >
+              {isMenuOpen ? <IoIosClose /> : <IoMenu className='text-[40px]' />}
             </div>
           </div>
         </div>
+        {/* mobile menu */}
+        <div
+          className={`absolute bottom-0 right-0 z-10 flex translate-y-full flex-col gap-8 overflow-hidden bg-[#092044] px-6 text-white transition-all xl:hidden ${isMenuOpen ? 'max-h-[500px] py-4' : 'max-h-0 py-0'}`}
+        >
+          <Link href={'/'}>Home</Link>
+          <Link href={'/'}>News</Link>
+          <Link href={'/'}>Event</Link>
+          <Link href={'/'}>Research Facilities</Link>
+          <Link href={'/'}>Organization</Link>
+          <Link
+            href={'/'}
+            className='w-fit bg-[#F5CA44] px-3.5 py-3 text-sm text-black'
+          >
+            Login
+          </Link>
+        </div>
       </header>
       {/* hero */}
-      <div className='relative flex h-[386px] w-full flex-col items-center justify-center px-16 py-[90px] md:h-[450px] xl:h-[600px]'>
+      <div className='relative mt-[150px] flex h-[386px] w-full flex-col items-center justify-center px-16 py-[90px] md:h-[450px] xl:mt-[155px] xl:h-[600px]'>
         <Image
           src={'/hero.png'}
           alt={'hero'}
