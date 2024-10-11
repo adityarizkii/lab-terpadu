@@ -9,7 +9,7 @@ const index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <header className='fixed top-0 z-50 w-full'>
         <div className='flex justify-end gap-10 bg-white px-6 py-3 xl:px-[150px]'>
           <Link href={'/'} className='text-xs md:text-sm'>
@@ -90,14 +90,23 @@ const index = () => {
           style={{ objectFit: 'cover' }}
           className='-z-10'
         />
-        <h1 className='text-center text-2xl font-medium text-white md:text-3xl xl:max-w-[900px] xl:text-6xl xl:leading-normal'>
+        <h1
+          data-aos='fade-down'
+          className='text-center text-2xl font-medium text-white md:text-3xl xl:max-w-[900px] xl:text-6xl xl:leading-normal'
+        >
           Unram Integrated Portal for Reserach and Technology
         </h1>
-        <p className='mb-6 mt-2 text-center text-xs font-light text-white md:mt-4 xl:mb-10 xl:text-lg'>
+        <p
+          className='mb-6 mt-2 text-center text-xs font-light text-white md:mt-4 xl:mb-10 xl:text-lg'
+          data-aos='fade-down'
+        >
           Explore our services and find the best solutions for your research
           needs
         </p>
-        <button className='bg-[#F5CA44] p-3 font-medium xl:px-5 xl:text-xl'>
+        <button
+          className='bg-[#F5CA44] p-3 font-medium xl:px-5 xl:text-xl'
+          data-aos='fade-down'
+        >
           Start Your Research
         </button>
       </div>
@@ -119,7 +128,10 @@ const index = () => {
             </p>
           </div>
         </div>
-        <div className='relative h-[200px] w-full xl:h-[300px]'>
+        <div
+          className='relative h-[200px] w-full xl:h-[300px]'
+          data-aos='fade-left'
+        >
           <Image
             src={'/aboutus.png'}
             alt='about-us-img'
@@ -129,7 +141,10 @@ const index = () => {
         </div>
       </div>
       <div className='bg-[#092044] px-6 py-16 text-white xl:flex xl:items-center xl:gap-20 xl:pl-0 xl:pr-[150px]'>
-        <div className='relative h-[640px] w-full xl:w-[514px]'>
+        <div
+          className='relative h-[640px] w-full xl:w-[514px]'
+          data-aos='fade-right'
+        >
           <Image
             src={'/service.png'}
             alt='service'
