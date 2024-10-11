@@ -87,7 +87,7 @@ const News = () => {
       >
         <div className='flex items-center gap-3'>
           <Image src={'/menu-black.svg'} alt='menu' width={24} height={24} />
-          <h2 className='font-medium'>Berita Terbaru</h2>
+          <h2 className='font-medium xl:text-lg'>Berita Terbaru</h2>
         </div>
         <h2 className='mt-6 text-center text-2xl font-semibold xl:max-w-[1100px] xl:text-5xl xl:leading-normal'>
           Ikuti Kabar dan Acara Terbaru dari UPA Laboratorium Terpadu
@@ -104,6 +104,7 @@ const News = () => {
         <div
           className='relative flex w-full shrink-0 items-center justify-center border border-white bg-[url("/news.png")] bg-cover bg-no-repeat px-9 py-14 text-white xl:row-span-2'
           data-aos='fade-right'
+          data-aos-once='true'
         >
           {/* overlay */}
           <div className='absolute inset-0 bg-[#092044] opacity-30'></div>
@@ -128,6 +129,7 @@ const News = () => {
         <div
           className='relative flex w-full shrink-0 items-center justify-center border border-white bg-[url("/news.png")] bg-cover bg-no-repeat px-9 py-14 text-white'
           data-aos='fade-left'
+          data-aos-once='true'
         >
           {/* overlay */}
           <div className='absolute inset-0 bg-[#092044] opacity-30'></div>
@@ -152,6 +154,7 @@ const News = () => {
         <div
           className='relative flex w-full shrink-0 items-center justify-center border border-white bg-[url("/news.png")] bg-cover bg-no-repeat px-9 py-14 text-white'
           data-aos='fade-left'
+          data-aos-once='true'
         >
           {/* overlay */}
           <div className='absolute inset-0 bg-[#092044] opacity-30'></div>
@@ -175,7 +178,9 @@ const News = () => {
       </div>
       {/* news list */}
       <div className='px-10 py-12'>
-        <h2 className='text-center text-3xl font-semibold'>Berita Terbaru</h2>
+        <h2 className='text-center text-3xl font-semibold' data-aos='fade-down'>
+          Berita Terbaru
+        </h2>
         <div className='mt-6 grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3'>
           <div className='border border-black'>
             <div className='relative h-[180px] w-full'>
