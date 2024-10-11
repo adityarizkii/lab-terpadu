@@ -5,7 +5,7 @@ import { FaBuilding } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
 import { IoMenu } from 'react-icons/io5';
 
-const index = () => {
+const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -443,4 +443,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default HomePage;

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { FaBuilding } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
 import { IoLocationSharp, IoMenu } from 'react-icons/io5';
 
